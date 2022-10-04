@@ -5,5 +5,4 @@ matplotlib \
 numpy \
 scrapy \
 requests \
-bs4 \
-urllib
+bs4 
