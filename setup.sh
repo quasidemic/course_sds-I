@@ -3,3 +3,7 @@
 pip install pandas \
 matplotlib \
 numpy \
+scrapy \
+requests \
+bs4 \
+urllib

@@ -65,10 +65,10 @@ if( window.location.search.match( /print-pdf/gi ) ) {
     <!-- End of mathjax configuration -->
 
 <style type="text/css">
-    pre { line-height: 125%; }
-td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
-span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
-td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+    pre { line-height: 125%; margin: 0; }
+td.linenos pre { color: #000000; background-color: #f0f0f0; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: #000000; background-color: #f0f0f0; padding-left: 5px; padding-right: 5px; }
+td.linenos pre.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
 span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
 .highlight .hll { background-color: var(--jp-cell-editor-active-background) }
 .highlight { background: var(--jp-cell-editor-background); color: var(--jp-mirror-editor-variable-color) }
@@ -92,7 +92,6 @@ span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 
 .highlight .m { color: var(--jp-mirror-editor-number-color) } /* Literal.Number */
 .highlight .s { color: var(--jp-mirror-editor-string-color) } /* Literal.String */
 .highlight .ow { color: var(--jp-mirror-editor-operator-color); font-weight: bold } /* Operator.Word */
-.highlight .pm { color: var(--jp-mirror-editor-punctuation-color) } /* Punctuation.Marker */
 .highlight .w { color: var(--jp-mirror-editor-variable-color) } /* Text.Whitespace */
 .highlight .mb { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Bin */
 .highlight .mf { color: var(--jp-mirror-editor-number-color) } /* Literal.Number.Float */
@@ -14393,7 +14392,7 @@ div.jp-OutputPrompt {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Program">Program<a class="anchor-link" href="#Program">&#182;</a></h2><ul>
 <li>Opfølgning fra sidste undervisningsgang</li>
-<li>At tilgå internettet med Python (&quot;requests&quot; i Python)</li>
+<li>At tilgå internettet med Python ("requests" i Python)</li>
 <li>API-kald i Python (eksempler fra Reddit Pushshift API og Twitter API)</li>
 <li>Scraping af HTML med <code>BeautifulSoup</code></li>
 <li>Introduktion til crawlers med <code>scrapy</code></li>
@@ -14403,18 +14402,18 @@ div.jp-OutputPrompt {
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Opf%C3%B8lgning-fra-sidste-undervisningsgang">Opf&#248;lgning fra sidste undervisningsgang<a class="anchor-link" href="#Opf%C3%B8lgning-fra-sidste-undervisningsgang">&#182;</a></h1>
+<h1 id="Opf&#248;lgning-fra-sidste-undervisningsgang">Opf&#248;lgning fra sidste undervisningsgang<a class="anchor-link" href="#Opf&#248;lgning-fra-sidste-undervisningsgang">&#182;</a></h1>
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><img src="../img/dns.png" alt="dns" /></p>
+<p><img src="../img/dns.png" alt="dns"></p>
 
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="At-tilg%C3%A5-internettet-i-Python">At tilg&#229; internettet i Python<a class="anchor-link" href="#At-tilg%C3%A5-internettet-i-Python">&#182;</a></h2><p>To skridt involveret i at samle data fra internettet:</p>
+<h2 id="At-tilg&#229;-internettet-i-Python">At tilg&#229; internettet i Python<a class="anchor-link" href="#At-tilg&#229;-internettet-i-Python">&#182;</a></h2><p>To skridt involveret i at samle data fra internettet:</p>
 <p><strong>1. Send (http) request (GET eller POST)</strong></p>
 <p><strong>2. Behandl indhold</strong></p>
 <ul>
@@ -14428,7 +14427,7 @@ div.jp-OutputPrompt {
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="HTTP-requests">HTTP requests<a class="anchor-link" href="#HTTP-requests">&#182;</a></h2><img src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works/simple-client-server.png" style="width:50.0%" />
+<h2 id="HTTP-requests">HTTP requests<a class="anchor-link" href="#HTTP-requests">&#182;</a></h2><p><img src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works/simple-client-server.png" style="width:50.0%" /></p>
 <p><strong>Request</strong></p>
 <ul>
 <li>Det, som vi afsender</li>
@@ -14441,7 +14440,7 @@ div.jp-OutputPrompt {
 <p><strong>Response</strong></p>
 <ul>
 <li>Det, som returneres</li>
-<li>Data af en eller anden form - afhængigt af servermodtager</li>
+<li>Data af en eller anden form - afhænger af modtagende server</li>
 </ul>
 
 </div>
@@ -14451,10 +14450,10 @@ div.jp-OutputPrompt {
 <h2 id="Statuskoder">Statuskoder<a class="anchor-link" href="#Statuskoder">&#182;</a></h2><p>En HTTP request returnerer altid en statuskode.</p>
 <ul>
 <li>Statuskode der starter med 2 eller 3: Request successful<ul>
-<li>200 = &quot;OK&quot;</li>
+<li>200 = "OK"</li>
 </ul>
 </li>
-<li>Statuskode der starter med 4: Request har fejlet (&quot;client-side&quot;, fx 404).</li>
+<li>Statuskode der starter med 4: Request har fejlet ("client-side", fx 404).</li>
 <li>Statuskode der starter med 5: Request har fejlet (server-side)</li>
 </ul>
 
@@ -14463,13 +14462,13 @@ div.jp-OutputPrompt {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Requests-med-requests">Requests med <code>requests</code><a class="anchor-link" href="#Requests-med-requests">&#182;</a></h2><p><code>requests</code> indeholder funktioner til at sende HTTP requests.</p>
-<p>En browser sender en GET request, når den skal &quot;hente&quot; en hjemmeside:</p>
+<p>En browser sender en GET request, når den skal "hente" en hjemmeside:</p>
 
 </div>
 </div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
@@ -14485,13 +14484,13 @@ div.jp-OutputPrompt {
 </div></div><div class="fragment">
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><code>r</code> er nu en &quot;response&quot; class med forskellige attributter; fx <code>.status_code</code>:</p>
+<p><code>r</code> er nu en "response" class med forskellige attributter; fx <code>.status_code</code>:</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">r</span><span class="o">.</span><span class="n">status_code</span>
@@ -14510,7 +14509,7 @@ div.jp-OutputPrompt {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[2]:</div>
 
 
 
@@ -14534,7 +14533,7 @@ div.jp-OutputPrompt {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">1000</span><span class="p">]</span>
@@ -14553,7 +14552,7 @@ div.jp-OutputPrompt {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
 
 
 
@@ -14571,7 +14570,8 @@ div.jp-OutputPrompt {
 </div></div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="API-kald-i-Python">API-kald i Python<a class="anchor-link" href="#API-kald-i-Python">&#182;</a></h2><p>API'er er forskellige men indeholder typisk de samme delkomponenter:</p>
+<h2 id="API-kald-i-Python">API-kald i Python<a class="anchor-link" href="#API-kald-i-Python">&#182;</a></h2><p>API: Application Programming Interface - henviser generelt til system-til-system "sprog" (ikke kun databaser).</p>
+<p>API'er er forskellige men indeholder typisk de samme delkomponenter:</p>
 <p><strong>Request:</strong> Brug af API involverer at sende HTTP request (GET eller POST).</p>
 <p><strong>Endpoint:</strong> API'er består typisk af flere <em>endpoints</em>. Disse er blot URL'er.</p>
 <p><strong>Parametre:</strong> Parametre er de <em>argumetnter</em>, som endpointet accepterer. Via disse formuleres, hvad der efterspørges af API'en.</p>
@@ -14597,63 +14597,68 @@ div.jp-OutputPrompt {
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="(Kort)-Introduktion-til-HTML">(Kort) Introduktion til HTML<a class="anchor-link" href="#(Kort)-Introduktion-til-HTML">&#182;</a></h2><p>Når man arbejder med &quot;rå&quot; web scraping, er materialet man får tilbage i form af rå kildekode.</p>
+<h1 id="API-kald-i-Python-(live-coding)">API-kald i Python (live-coding)<a class="anchor-link" href="#API-kald-i-Python-(live-coding)">&#182;</a></h1>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="(Kort)-Introduktion-til-HTML">(Kort) Introduktion til HTML<a class="anchor-link" href="#(Kort)-Introduktion-til-HTML">&#182;</a></h2><p>Når man arbejder med "rå" web scraping, er materialet man får tilbage i form af rå kildekode.</p>
 <p>Det ville være meget besværligt at sortere i rå kildekode, som det ser ud.</p>
-<p>HTML har en struktur, som kan &quot;udnyttes&quot; til at filtrere unødvendig information fra.</p>
+<p>HTML har en struktur, som kan "udnyttes" til at filtrere unødvendig information fra.</p>
 
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="(Kort)-Introduktion-til-HTML">(Kort) Introduktion til HTML<a class="anchor-link" href="#(Kort)-Introduktion-til-HTML">&#182;</a></h2><p><strong>Rå HTML</strong></p>
+
 <pre><code>    &lt;html&gt;
         &lt;body&gt;
-            &lt;div id=&quot;convo1&quot;&gt;
-                &lt;p class=&quot;kenobi&quot;&gt;Hello There!&lt;/p&gt;
+            &lt;div id="convo1"&gt;
+                &lt;p class="kenobi"&gt;Hello There!&lt;/p&gt;
             &lt;/div&gt;
-            &lt;div id=&quot;convo2&quot;&gt;
-                &lt;p class=&quot;grievous&quot;&gt;General Kenobi!&lt;/p&gt;
+            &lt;div id="convo2"&gt;
+                &lt;p class="grievous"&gt;General Kenobi!&lt;/p&gt;
             &lt;/div&gt;
-            &lt;div id=&quot;convo3&quot;&gt;
-                &lt;p class=&quot;kenobi&quot;&gt;So Uncivilized!&lt;/p&gt;
+            &lt;div id="convo3"&gt;
+                &lt;p class="kenobi"&gt;So Uncivilized!&lt;/p&gt;
             &lt;/div&gt;
         &lt;/body&gt;
-    &lt;/html&gt;
-</code></pre>
+    &lt;/html&gt;</code></pre>
 <p><strong>Rendered (som vist på hjemmeside)</strong></p>
+
 <pre><code>Hello There!
 
 General Kenobi!
 
-So Uncivilized!
-</code></pre>
+So Uncivilized!</code></pre>
 <p><em>Hvilken datastruktur minder rå HTML jer om?</em></p>
 
 </div>
-</div>
+</div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="(Kort)-Introduktion-til-HTML---Tags">(Kort) Introduktion til HTML - Tags<a class="anchor-link" href="#(Kort)-Introduktion-til-HTML---Tags">&#182;</a></h2><p>HTML står for &quot;Hyper-Text Markup Language&quot;. Det bruges til at strukturere indhold på hjemmesider.</p>
-<p>HTML er opbygget af &quot;tags&quot; angivet med <code>&lt;&gt;</code> og <code>&lt;/&gt;</code>. Disse fortæller hvilken type indhold, der er tale om. <code>&lt;p&gt;</code> er for eksempel &quot;paragraph&quot; (tekstafnit).</p>
+<h2 id="(Kort)-Introduktion-til-HTML---Tags">(Kort) Introduktion til HTML - Tags<a class="anchor-link" href="#(Kort)-Introduktion-til-HTML---Tags">&#182;</a></h2><p>HTML står for "Hyper-Text Markup Language". Det bruges til at strukturere indhold på hjemmesider.</p>
+<p>HTML er opbygget af "tags" angivet med <code>&lt;&gt;</code> og <code>&lt;/&gt;</code>. Disse fortæller hvilken type indhold, der er tale om. <code>&lt;p&gt;</code> er for eksempel "paragraph" (tekstafnit).</p>
 <ul>
-<li>Typiske tags: <code>h1</code> for overskrifter (og <code>h2</code>, <code>h3</code> osv.), <code>a</code> for links og <code>div</code> for e &quot;division&quot; eller adskillelse.</li>
+<li>Typiske tags: <code>h1</code> for overskrifter (og <code>h2</code>, <code>h3</code> osv.), <code>a</code> for links og <code>div</code> for "division" eller adskillelse.</li>
 </ul>
 <p>HTML har en træ-lignende struktur. Tags befinder sig inde i andre tags.</p>
 <ul>
-<li>&quot;Siblings&quot;/&quot;Søskende&quot;: Tags på samme niveau</li>
-<li>&quot;Children&quot;/&quot;Børn&quot;: Tags under/inden i et andet tag</li>
-<li>&quot;Parents&quot;/&quot;Forældre&quot;: Tags over/uden for et andet tag</li>
+<li>"Siblings"/"Søskende": Tags på samme niveau </li>
+<li>"Children"/"Børn": Tags under/inden i et andet tag</li>
+<li>"Parents"/"Forældre": Tags over/uden for et andet tag</li>
 </ul>
 
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="(Kort)-Introduktion-til-HTML---Attributes">(Kort) Introduktion til HTML - Attributes<a class="anchor-link" href="#(Kort)-Introduktion-til-HTML---Attributes">&#182;</a></h2><p>HTML bruger &quot;attributes&quot; til både at differentiere mellem den samme type tag og til at tilføje yderligere information til et tag.</p>
+<h2 id="(Kort)-Introduktion-til-HTML---Attributes">(Kort) Introduktion til HTML - Attributes<a class="anchor-link" href="#(Kort)-Introduktion-til-HTML---Attributes">&#182;</a></h2><p>HTML bruger "attributes" til både at differentiere mellem den samme type tag og til at tilføje yderligere information til et tag.</p>
 <p>Opbyggeren af en hjemmeside kan selv navngive attributes, men visse standarder går igen:</p>
 <ul>
-<li><code>id</code> attribute: Giver tags unikt id (ideelt set)</li>
-<li><code>class</code> attribute: Differentiere mellem forskellige tags af samme type - fx for at give forskellig styling/formatering</li>
+<li><code>id</code> attribute: Giver tags unikt id (ideelt set) </li>
+<li><code>class</code> attribute: Differentierer typisk mellem forskellige tags af samme type - fx for at give forskellig styling/formatering</li>
 <li><code>href</code> attribute: Indeholder URL som hyperlink refererer til (typisk en del af et <code>a</code> tag)</li>
 </ul>
 
@@ -14661,49 +14666,52 @@ So Uncivilized!
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="(Kort)-Introduktion-til-HTML">(Kort) Introduktion til HTML<a class="anchor-link" href="#(Kort)-Introduktion-til-HTML">&#182;</a></h2><p><em>Uden at søge på tekstindholdet, hvordan kan vi så udlede teksten &quot;General Kenobi&quot; af nedenstående HTML-kode?</em></p>
+<h2 id="(Kort)-Introduktion-til-HTML">(Kort) Introduktion til HTML<a class="anchor-link" href="#(Kort)-Introduktion-til-HTML">&#182;</a></h2><p><em>Uden at søge på tekstindholdet, hvordan kan vi så udlede teksten "General Kenobi" af nedenstående HTML-kode?</em></p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+
 <pre><code>    &lt;html&gt;
         &lt;body&gt;
-            &lt;div id=&quot;convo1&quot;&gt;
-                &lt;p class=&quot;kenobi&quot;&gt;Hello There!&lt;/p&gt;
+            &lt;div id="convo1"&gt;
+                &lt;p class="kenobi"&gt;Hello There!&lt;/p&gt;
             &lt;/div&gt;
-            &lt;div id=&quot;convo2&quot;&gt;
-                &lt;p class=&quot;grievous&quot;&gt;General Kenobi!&lt;/p&gt;
+            &lt;div id="convo2"&gt;
+                &lt;p class="grievous"&gt;General Kenobi!&lt;/p&gt;
             &lt;/div&gt;
-            &lt;div id=&quot;convo3&quot;&gt;
-                &lt;p class=&quot;kenobi&quot;&gt;So Uncivilized!&lt;/p&gt;
+            &lt;div id="convo3"&gt;
+                &lt;p class="kenobi"&gt;So Uncivilized!&lt;/p&gt;
             &lt;/div&gt;
         &lt;/body&gt;
-    &lt;/html&gt;
-</code></pre>
+    &lt;/html&gt;</code></pre>
 
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="H%C3%A5ndtering-af-HTML-med-BeautifulSoup">H&#229;ndtering af HTML med <code>BeautifulSoup</code><a class="anchor-link" href="#H%C3%A5ndtering-af-HTML-med-BeautifulSoup">&#182;</a></h2><p>Pakken <code>BeautifulSoup</code> gør det nemmere at håndtere og navigere i HTML kode.</p>
+<h2 id="H&#229;ndtering-af-HTML-med-BeautifulSoup">H&#229;ndtering af HTML med <code>BeautifulSoup</code><a class="anchor-link" href="#H&#229;ndtering-af-HTML-med-BeautifulSoup">&#182;</a></h2><p>Pakken <code>BeautifulSoup</code> gør det nemmere at håndtere og navigere i HTML kode.</p>
 <p>Pakkens funktioner er bygget op omkring et <code>soup</code> objekt.</p>
 <p>Pakken fungerer ved at konvertere kildekode/HTML fra en hjemmeside (en string) til et <code>soup</code> objekt.</p>
-<p>Man kan bruges HTML tags og attribute til at navigere i et <code>soup</code> objekt - blandt andet med metoderne <code>.find()</code> og <code>.find_all()</code></p>
+<p>Man kan bruge HTML tags og attributes til at navigere i et <code>soup</code> objekt - blandt andet med metoderne <code>.find()</code> og <code>.find_all()</code></p>
 
 </div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="H%C3%A5ndtering-af-HTML-med-BeautifulSoup">H&#229;ndtering af HTML med <code>BeautifulSoup</code><a class="anchor-link" href="#H%C3%A5ndtering-af-HTML-med-BeautifulSoup">&#182;</a></h2>
+<h2 id="H&#229;ndtering-af-HTML-med-BeautifulSoup">H&#229;ndtering af HTML med <code>BeautifulSoup</code><a class="anchor-link" href="#H&#229;ndtering-af-HTML-med-BeautifulSoup">&#182;</a></h2><p><code>BeautifulSoup</code> fungerer ved at konvertere HTML til et <code>soup</code> objekt.</p>
+
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### eksempel</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span> <span class="k">as</span> <span class="n">bs</span>
+
+<span class="n">soup</span> <span class="o">=</span> <span class="n">bs</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="s2">&quot;html.parser&quot;</span><span class="p">)</span> <span class="c1"># bruger indholdet fra aau.dk - se tidligere slide</span>
 </pre></div>
 
      </div>
@@ -14711,10 +14719,232 @@ So Uncivilized!
 </div>
 </div>
 
+</div></div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Derefter kan man bruge HTML strukturen til at navigere i kildekoden:</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;h1&#39;</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[5]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>&lt;h1 class=&#34;Heading_Heading__p89D6 Heading_Heading___display__24rOw Hero_Hero_heading__1w40w Hero_Hero_heading___small__1fNfP&#34; title=&#34;&#34;&gt;&lt;span class=&#34;Hero_Hero_headingLine__3eOZd&#34;&gt;Aalborg Univer­sitet &lt;/span&gt;&lt;span class=&#34;Hero_Hero_headingLine__3eOZd&#34;&gt;åbner nyt iværksætter- &lt;/span&gt;&lt;span class=&#34;Hero_Hero_headingLine__3eOZd&#34;&gt;og innova­tionsmiljø&lt;/span&gt;&lt;/h1&gt;</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div></div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Selve teksten udledes med <code>.get_text()</code>:</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;h1&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">get_text</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>&#39;Aalborg Univer\xadsitet åbner nyt iværksætter- og innova\xadtionsmiljø&#39;</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div></div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="H&#229;ndtering-af-HTML-med-BeautifulSoup">H&#229;ndtering af HTML med <code>BeautifulSoup</code><a class="anchor-link" href="#H&#229;ndtering-af-HTML-med-BeautifulSoup">&#182;</a></h2><p>Metoderne <code>.find()</code> og <code>.find_all()</code> bruges til at navigere i HTML.</p>
+<ul>
+<li><code>.find()</code>: Returnerer første match som et nyt soup objekt</li>
+<li><code>.find_all()</code>: Returnerer alle matches som en liste af soup objekter</li>
+</ul>
+
+</div>
+</div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Fordi metoderne returnerer nye soup objekter, kan man navigere i HTML'ens træstruktur:</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">h1_soup</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;h1&#39;</span><span class="p">)</span>
+
+<span class="n">span_soup</span> <span class="o">=</span> <span class="n">h1_soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;span&#39;</span><span class="p">)</span> <span class="c1"># span er et &quot;barn&quot; til h1</span>
+
+<span class="n">span_soup</span><span class="o">.</span><span class="n">get_text</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>&#39;Aalborg Univer\xadsitet &#39;</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div></div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="H&#229;ndtering-af-HTML-med-BeautifulSoup---Attributes">H&#229;ndtering af HTML med <code>BeautifulSoup</code> - Attributes<a class="anchor-link" href="#H&#229;ndtering-af-HTML-med-BeautifulSoup---Attributes">&#182;</a></h2><p><code>BeautifulSoup</code> understøtter at søge efter attributes. Attributes som <code>id</code> og <code>class</code> har sine egne argumenter:</p>
+<div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">,</span> <span class="n">class_</span> <span class="o">=</span> <span class="s1">&#39;classname&#39;</span><span class="p">)</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">,</span> <span class="nb">id</span> <span class="o">=</span> <span class="s1">&#39;idname&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Da attributter kan være kaldt alt muligt, kan man selv specificere attribut-navnet med <code>attrs</code>-argumentet (dictionary):</p>
+<div class="highlight"><pre><span></span><span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">,</span> <span class="n">attrs</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;some_attribute&#39;</span><span class="p">:</span> <span class="s1">&#39;attribute_value&#39;</span><span class="p">})</span>
+</pre></div>
+
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><em>Bemærk!:</em> Søgning efter attributes understøtter regular expression:</p>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
+
+<span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">,</span> <span class="n">class_</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;TeaserCard&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">get_text</span><span class="p">()</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>&#39;Ekspertliste: FolketingsvalgRygtet svirrer om et snarligt folketingsvalg. Vi har samlet en liste over en række eksperter, som kan udtale sig om emner, der kunne blive centrale i en kommende valgkamp.Folketingsvalg&#39;</pre>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div></div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="H&#229;ndtering-af-HTML-med-BeautifulSoup---&quot;Familietr&#230;et&quot;">H&#229;ndtering af HTML med <code>BeautifulSoup</code> - "Familietr&#230;et"<a class="anchor-link" href="#H&#229;ndtering-af-HTML-med-BeautifulSoup---&quot;Familietr&#230;et&quot;">&#182;</a></h2><p><code>BeautifulSoup</code> har forskellige metoder til at navigere i HTML'ens træstruktur.</p>
+<ul>
+<li><code>soup.next_sibling</code>/<code>soup.previous_sibling</code>: Returnerer hhv. næste eller forrige tag, som er på samme niveau som nuværende </li>
+<li><code>soup.parent</code>: Returnerer tag over tag for nuværende soup objekt</li>
+<li><code>soup.parents</code>: Itererer over "stamtræet"</li>
+</ul>
+
+</div>
 </div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Introduktion-til-crawling">Introduktion til crawling<a class="anchor-link" href="#Introduktion-til-crawling">&#182;</a></h2><p>&quot;Crawlers&quot; eller &quot;spiders&quot; refererer typisk til programmer eller bots, der er bygget til at bevæge sig rundt på flere hjemmesider.</p>
+<h1 id="Web-scraping-i-Python-(live-coding)">Web scraping i Python (live-coding)<a class="anchor-link" href="#Web-scraping-i-Python-(live-coding)">&#182;</a></h1>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Introduktion-til-crawling">Introduktion til crawling<a class="anchor-link" href="#Introduktion-til-crawling">&#182;</a></h2><p>"Crawlers" eller "spiders" refererer typisk til programmer eller bots, der er bygget til at bevæge sig rundt på flere hjemmesider.</p>
 <p><strong>En crawler består typisk af følgende:</strong></p>
 <ul>
 <li>Startbetingelser: Hvor skal crawleren starte?</li>
@@ -14729,17 +14959,17 @@ So Uncivilized!
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Introduktion-til-crawling">Introduktion til crawling<a class="anchor-link" href="#Introduktion-til-crawling">&#182;</a></h2><p><em>Crawlers bevæger sig altid mod overfladen!</em></p>
-<img src="../img/web_sea.png" style="width:90.0% "/>
+<p><img src="../img/web_sea.png" style="width:90.0% "/></p>
 
 </div>
-</div>
+</div></section></section><section><section>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Introduktion-til-crawling">Introduktion til crawling<a class="anchor-link" href="#Introduktion-til-crawling">&#182;</a></h2><p>En crawler kan sagtens sættes op med basis Python kommandoer:</p>
 <ul>
 <li>Definere scraping-funktion (<code>def</code>)</li>
 <li>Brug <code>requests</code> og <code>BeautifulSoup</code> til at skaffe og behandle hjemmesideindhold</li>
-<li>Gentag scraping, så længe der er flere links (fx med et <code>while</code> loop)</li>
+<li>Gentag scraping, så længe der er flere links (fx med et <code>while</code> loop) </li>
 </ul>
 <p>En crawler kræver dog en del fejlhåndtering:</p>
 <ul>
@@ -14755,20 +14985,25 @@ So Uncivilized!
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Introduktion-til-crawling---Advarsel!">Introduktion til crawling - Advarsel!<a class="anchor-link" href="#Introduktion-til-crawling---Advarsel!">&#182;</a></h2><p><em>HUSK!:</em></p>
-<img src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works/simple-client-server.png" style="width:50.0%" />
+<p><img src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works/simple-client-server.png" style="width:50.0%" /></p>
 <p><strong>Dette sker for <em>hver</em> henvendelse!</strong></p>
 <ul>
 <li>Scraping af enkelt hjemmeside: én request én gang</li>
 <li>Crawler: ??? requests inden for ??? tid</li>
 </ul>
-<p>En crawler <em>skal</em> have forsinkelser indbygget mellem requests - ellers kan det betragtes som et angreb på server (robots.txt vil også nogen gange specificere et &quot;crawl-delay&quot;)</p>
-<p>Kan fx gøres med <code>time.sleep()</code></p>
+<p>En crawler <em>skal</em> have forsinkelser indbygget mellem requests - ellers kan det betragtes som et angreb på server (robots.txt vil også nogen gange specificere et "crawl-delay")</p>
+
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Introduktion-til-crawling">Introduktion til crawling<a class="anchor-link" href="#Introduktion-til-crawling">&#182;</a></h2><p>En simpel måde at skabe forsinkelser er fx med <code>time.sleep()</code></p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
@@ -14809,6 +15044,17 @@ So Uncivilized!
 
 </div>
 
+</div><div class="fragment">
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Scrapere fra <code>scrapy</code> vil dog have forsinkelse indbygget.</p>
+
+</div>
+</div></div></section></section><section><section>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Crawling-i-Python-(live-coding)">Crawling i Python (live-coding)<a class="anchor-link" href="#Crawling-i-Python-(live-coding)">&#182;</a></h1>
+</div>
 </div></section></section>
 </div>
 </div>
