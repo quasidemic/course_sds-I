@@ -14659,36 +14659,24 @@ div.jp-OutputPrompt {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p><strong>Disposition</strong></p>
-<ul>
-<li>Text clustering eksempel - betydning af pre-processing</li>
-<li>Intro: Tekst som data</li>
-<li>Fra tekst til enheder: tokenization<ul>
-<li>&quot;Tegneeksempel&quot; - hvad er vigtigt i en tekst?</li>
-<li>Tokenization</li>
-<li>Casing</li>
-<li>Stopord</li>
-<li>Stemming</li>
-<li>Lemmatization</li>
-</ul>
-</li>
-<li>Fra tekst til datastruktur: vectorization<ul>
-<li>Document-term matrix (/term-document matrix)<ul>
-<li>Bag-of-words</li>
-</ul>
-</li>
-<li>Tællinger</li>
-<li>Binært</li>
-<li>Tf-idf</li>
-<li>Obs!: Sparsity</li>
-</ul>
-</li>
-<li>Live coding:<ul>
-<li>Brug af spacy</li>
-<li>Tokenizerfunktion</li>
-<li>Vectorizer med egen tokenizer</li>
-</ul>
-</li>
+<h1 id="Messy-data-i-praksis-%E2%80%93-Oprydning-i-tekst">Messy data i praksis &#8211; Oprydning i tekst<a class="anchor-link" href="#Messy-data-i-praksis-%E2%80%93-Oprydning-i-tekst">&#182;</a></h1>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Program">Program<a class="anchor-link" href="#Program">&#182;</a></h2><ul>
+<li>Bearbejdning af tekst - eksempel med klyngeanalyse</li>
+<li>Udfordringer med tekst som data</li>
+<li>Tekst og datastruktur</li>
+<li>Tekst bearbejdning (pre-processing) (med NLP)</li>
+<li>Introduktion til sprogmodeller i spaCy</li>
+<li>Ordtællinger med text vectorizers og bag-of-words datastrukturer</li>
 </ul>
 
 </div>
@@ -14701,18 +14689,7 @@ div.jp-OutputPrompt {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Messy-data-i-praksis-%E2%80%93-Oprydning-i-tekst">Messy data i praksis &#8211; Oprydning i tekst<a class="anchor-link" href="#Messy-data-i-praksis-%E2%80%93-Oprydning-i-tekst">&#182;</a></h1>
-</div>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Eksempel-med-tekst-pre-processing-og-klyngeanalyse-(live-coding)">Eksempel med tekst pre-processing og klyngeanalyse (live-coding)<a class="anchor-link" href="#Eksempel-med-tekst-pre-processing-og-klyngeanalyse-(live-coding)">&#182;</a></h1>
+<h2 id="Eksempel-med-tekst-pre-processing-og-klyngeanalyse-(live-coding)">Eksempel med tekst pre-processing og klyngeanalyse (live-coding)<a class="anchor-link" href="#Eksempel-med-tekst-pre-processing-og-klyngeanalyse-(live-coding)">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -15161,7 +15138,7 @@ div.jp-OutputPrompt {
 <p><strong>Udfordringer</strong>:</p>
 <ul>
 <li>Egenavne i flere ord: Høje Taastrup</li>
-<li>Sammensatteord med bindestreger</li>
+<li>Sammensatte ord med bindestreger</li>
 </ul>
 
 </div>
@@ -15197,7 +15174,7 @@ div.jp-OutputPrompt {
 <li>køren -&gt; kør</li>
 <li>kørte -&gt; kørt</li>
 </ul>
-<p>Flere algoritmer til at lave stemming - *dog ikke altid enige!</p>
+<p>Flere algoritmer til at lave stemming - <em>dog ikke altid enige!</em></p>
 <ul>
 <li>Snowball algoritme (sprogfølsom):     køren -&gt; kør</li>
 <li>Porter algoritme (ikke sprogfølsom):  køren -&gt; køren</li>
@@ -15233,9 +15210,9 @@ div.jp-OutputPrompt {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Stopord">Stopord<a class="anchor-link" href="#Stopord">&#182;</a></h2><p>Mange ord indgår i sprog uanset hvad teksten handler om (bindeord, stedord, forholdsord o.l.)</p>
+<h2 id="Stopord">Stopord<a class="anchor-link" href="#Stopord">&#182;</a></h2><p>Mange ord indgår i tekst uanset hvad teksten handler om (bindeord, stedord, forholdsord o.l.)</p>
 <p>Refereres til som &quot;stopord&quot; - frasorteres da de typisk ikke giver indblik i, hvad tekster handler om</p>
-<p>Stopord kan både være generelle (bindeord, stedord, forholdsord) eller kontekstspecifikke (fx 'ordfører' i referat fra Folketinget).</p>
+<p>Stopord kan både være generelle (bindeord, stedord, forholdsord) eller kontekstspecifikke (fx 'ordfører' i referater fra Folketinget).</p>
 
 </div>
 </div>
@@ -15455,7 +15432,7 @@ div.jp-OutputPrompt {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Brug-af-spaCy-i-Python-(live-coding)">Brug af <code>spaCy</code> i Python (live-coding)<a class="anchor-link" href="#Brug-af-spaCy-i-Python-(live-coding)">&#182;</a></h1>
+<h2 id="Brug-af-spaCy-i-Python-(live-coding)">Brug af <code>spaCy</code> i Python (live-coding)<a class="anchor-link" href="#Brug-af-spaCy-i-Python-(live-coding)">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -15467,7 +15444,7 @@ div.jp-OutputPrompt {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Fra-tekst-til-datastruktur">Fra tekst til datastruktur<a class="anchor-link" href="#Fra-tekst-til-datastruktur">&#182;</a></h2><p>Som nævnt er datastrukturer for tekster ikke givet.</p>
-<p>Det kommer både af, at konverteringen til tokens ikke er ens, men også ud fra, hvordan ordene skal opgøres (tælles, vægtes eller andet).</p>
+<p>Datastruktur afhænger både af, hvordan tekst er konverteret til tokens samt af, hvordan ordene skal opgøres (tælles, vægtes eller andet).</p>
 <p>Man anvender termet &quot;text vectorization&quot; til at referere til teknikker, der konverterer tekster til matematiske repræsentationer (datastrukturer, som man kan foretage beregninger på)</p>
 
 </div>
@@ -15589,7 +15566,7 @@ div.jp-OutputPrompt {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Ordt%C3%A6llinger">Ordt&#230;llinger<a class="anchor-link" href="#Ordt%C3%A6llinger">&#182;</a></h2><p>Simpleste måde at opgøre ord (eller tokens) i tekst: hvor mange gange er ordet nævnt i teksten.</p>
+<h2 id="Ordt%C3%A6llinger">Ordt&#230;llinger<a class="anchor-link" href="#Ordt%C3%A6llinger">&#182;</a></h2><p>Simpleste måde at opgøre ord (eller tokens) i tekst: hvor mange gange er ordet nævnt i teksten?</p>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -15800,7 +15777,7 @@ div.jp-OutputPrompt {
 <center>$tfidf = tf(t, d) * idf(t, D)$</center>
 <p><em>hvor:</em></p>
 <p>$tf(t, d)$: antal gange term $t$ er nævnt i dokument $d$,</p>
-<p>$idf(t, D) = log(\frac{D}{|\{d \in D : t \in d\}|})$: logaritmen af antal dokumenter i alt ($D$) divideret med antal dokumenter, der indeholder termet ($|{d \in D : t \in d\}$|)</p>
+<p>$idf(t, D) = log(\frac{D}{|\{d \in D : t \in d\}|})$: logaritmen af antal dokumenter i alt ($D$) divideret med antal dokumenter, der indeholder termet ($\{d \in D : t \in d\}$)</p>
 <p><em>Obs: Der kan være variationer i, hvordan tf og idf udregnes samt forskelle i brug af standardisering mellem funktioner</em></p>
 
 </div>
@@ -15914,7 +15891,7 @@ div.jp-OutputPrompt {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Vectorizers-i-Python-(live-coding)">Vectorizers i Python (live-coding)<a class="anchor-link" href="#Vectorizers-i-Python-(live-coding)">&#182;</a></h1>
+<h2 id="Vectorizers-i-Python-(live-coding)">Vectorizers i Python (live-coding)<a class="anchor-link" href="#Vectorizers-i-Python-(live-coding)">&#182;</a></h2>
 </div>
 </div>
 </div>
