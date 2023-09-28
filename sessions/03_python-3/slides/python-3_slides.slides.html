@@ -15187,11 +15187,23 @@ div.jp-OutputPrompt {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2 id="Program">Program<a class="anchor-link" href="#Program">&#182;</a></h2><ul>
-<li>Opfølgning fra sidste undervisningsgang</li>
-<li>Dataformater og datastrukturer</li>
 <li>Brug af egne funktioner i Python</li>
+<li>Dataformater og datastrukturer</li>
+<li>Sammensætning af data (concatenation, joins)</li>
+<li>Ændring af dataformat (wide, long)</li>
 </ul>
 
+</div>
+</div>
+</div>
+</div></section></section><section ><section >
+<div id="cell-id=35d80eab-cda5-4e41-a2fd-abb03b656199" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Brug-af-egne-funktioner-(live-coding)">Brug af egne funktioner (live-coding)<a class="anchor-link" href="#Brug-af-egne-funktioner-(live-coding)">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -15262,13 +15274,77 @@ div.jp-OutputPrompt {
 </div>
 </div>
 </div></section></section><section ><section >
+<div id="cell-id=ee99b1e0-6f70-4c40-afe7-2ba345bbd430" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Hyppige-datafilformater:-.csv">Hyppige datafilformater: .csv<a class="anchor-link" href="#Hyppige-datafilformater:-.csv">&#182;</a></h2><ul>
+<li>csv: &quot;Comma-separated values&quot;</li>
+<li>Én række per observation</li>
+<li>Værdier adskilt med kommaer</li>
+<li>To-dimensionel datastruktur</li>
+</ul>
+<pre><code>name,ethnicity,vocation
+James,earther,captain
+Naomi,belter,technician
+Alex,martian,pilot
+Clarissa,earther,mechanic
+</code></pre>
+
+</div>
+</div>
+</div>
+</div></section></section><section ><section >
+<div id="cell-id=0405fa17-b39d-4a8e-8e45-ea9909d7cfaa" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Hyppige-datafilformater:-.json">Hyppige datafilformater: .json<a class="anchor-link" href="#Hyppige-datafilformater:-.json">&#182;</a></h2><ul>
+<li>Hierarkisk dataformat</li>
+<li>Værdier i nøgle-værdi par</li>
+<li>Flere &quot;grene&quot; kan tilføjes</li>
+</ul>
+<pre><code>{'Nemesis Games': {
+    &quot;Characters&quot;: {
+        &quot;James Holden&quot;: {
+            &quot;Occupation&quot;: &quot;Captain&quot;, 
+            &quot;Ethnicity&quot;: &quot;Earther&quot;, 
+            &quot;Ship&quot;: {
+                &quot;Name&quot;: &quot;Rocinante&quot;,
+                &quot;Class&quot;: &quot;Corvette&quot;,
+                &quot;Owner&quot;: &quot;James Holden&quot;,
+                &quot;Crew-size&quot;: 6
+            }
+        },
+        &quot;Naomi Nagata&quot;: {
+            &quot;Occupation&quot;: &quot;Technician&quot;, 
+            &quot;Ethnicity&quot;: &quot;Belter&quot;,
+            &quot;Children&quot;: {
+                &quot;Filip Nagata&quot;: {
+                    &quot;Name&quot;: &quot;Filip Nagata&quot;,
+                    &quot;Occupation&quot;: &quot;Unknown&quot;
+                }
+            }
+        }
+    }
+}
+</code></pre>
+
+</div>
+</div>
+</div>
+</div></section></section><section ><section >
 <div id="cell-id=04721997-f8a5-4407-a495-62b3ad0738cd" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Liste-af-lister">Liste af lister<a class="anchor-link" href="#Liste-af-lister">&#182;</a></h2>
+<h2 id="Datastruktur-i-Python:-Liste-af-lister">Datastruktur i Python: Liste af lister<a class="anchor-link" href="#Datastruktur-i-Python:-Liste-af-lister">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -15277,7 +15353,7 @@ div.jp-OutputPrompt {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span>
@@ -15296,7 +15372,7 @@ div.jp-OutputPrompt {
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[34]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
 
 
 
@@ -15318,7 +15394,7 @@ div.jp-OutputPrompt {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="p">[</span><span class="n">items</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">items</span> <span class="ow">in</span> <span class="n">data</span><span class="p">]</span>
@@ -15337,7 +15413,7 @@ div.jp-OutputPrompt {
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[35]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
 
 
 
@@ -15359,7 +15435,7 @@ div.jp-OutputPrompt {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Dictionary-(JSON)">Dictionary (JSON)<a class="anchor-link" href="#Dictionary-(JSON)">&#182;</a></h2>
+<h2 id="Datastruktur-i-Python:-Dictionary-(JSON)">Datastruktur i Python: Dictionary (JSON)<a class="anchor-link" href="#Datastruktur-i-Python:-Dictionary-(JSON)">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -15368,7 +15444,7 @@ div.jp-OutputPrompt {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[37]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span>
@@ -15387,7 +15463,7 @@ div.jp-OutputPrompt {
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[37]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
 
 
 
@@ -15410,7 +15486,7 @@ div.jp-OutputPrompt {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[38]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;James&quot;</span><span class="p">]</span>
@@ -15429,7 +15505,7 @@ div.jp-OutputPrompt {
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[38]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[7]:</div>
 
 
 
@@ -15451,7 +15527,7 @@ div.jp-OutputPrompt {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Liste-af-dictionaries-(JSON-records)">Liste af dictionaries (JSON records)<a class="anchor-link" href="#Liste-af-dictionaries-(JSON-records)">&#182;</a></h2>
+<h2 id="Datastruktur-i-Python:-Liste-af-dictionaries-(JSON-records)">Datastruktur i Python: Liste af dictionaries (JSON records)<a class="anchor-link" href="#Datastruktur-i-Python:-Liste-af-dictionaries-(JSON-records)">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -15460,7 +15536,7 @@ div.jp-OutputPrompt {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[46]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span>
@@ -15479,7 +15555,7 @@ div.jp-OutputPrompt {
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[46]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
 
 
 
@@ -15502,7 +15578,7 @@ div.jp-OutputPrompt {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[40]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -15521,7 +15597,7 @@ div.jp-OutputPrompt {
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[40]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
 
 
 
@@ -15543,7 +15619,7 @@ div.jp-OutputPrompt {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Data-frame">Data frame<a class="anchor-link" href="#Data-frame">&#182;</a></h2>
+<h2 id="Datastruktur-i-Python:-(pandas)-Data-frame">Datastruktur i Python: (pandas) Data frame<a class="anchor-link" href="#Datastruktur-i-Python:-(pandas)-Data-frame">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -15552,7 +15628,7 @@ div.jp-OutputPrompt {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[42]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span>
@@ -15571,7 +15647,7 @@ div.jp-OutputPrompt {
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[42]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
 
 
 
@@ -15640,7 +15716,7 @@ div.jp-OutputPrompt {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[43]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]</span>
@@ -15659,7 +15735,7 @@ div.jp-OutputPrompt {
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[43]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
 
 
 
@@ -15677,70 +15753,6 @@ Name: 0, dtype: object</pre>
 
 </div>
 
-</div></section></section><section ><section >
-<div id="cell-id=9f2f1208-e036-4af3-b8bb-08dd0eef8241" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Hyppige-dataformater:-.csv">Hyppige dataformater: .csv<a class="anchor-link" href="#Hyppige-dataformater:-.csv">&#182;</a></h2><ul>
-<li>csv: &quot;Comma-separated values&quot;</li>
-<li>Én række per observation</li>
-<li>Værdier adskilt med kommaer</li>
-<li>To-dimensionel datastruktur</li>
-</ul>
-<pre><code>name,ethnicity,vocation
-James,earther,captain
-Naomi,belter,technician
-Alex,martian,pilot
-Clarissa,earther,mechanic
-</code></pre>
-
-</div>
-</div>
-</div>
-</div></section></section><section ><section >
-<div id="cell-id=666dffea-0699-46f2-be6c-770144e761bc" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Hyppige-dataformater:-.json">Hyppige dataformater: .json<a class="anchor-link" href="#Hyppige-dataformater:-.json">&#182;</a></h2><ul>
-<li>Hierarkisk dataformat</li>
-<li>Værdier i nøgle-værdi par</li>
-<li>Flere &quot;grene&quot; kan tilføjes</li>
-</ul>
-<pre><code>{'Nemesis Games': {
-    &quot;Characters&quot;: {
-        &quot;James Holden&quot;: {
-            &quot;Occupation&quot;: &quot;Captain&quot;, 
-            &quot;Ethnicity&quot;: &quot;Earther&quot;, 
-            &quot;Ship&quot;: {
-                &quot;Name&quot;: &quot;Rocinante&quot;,
-                &quot;Class&quot;: &quot;Corvette&quot;,
-                &quot;Owner&quot;: &quot;James Holden&quot;,
-                &quot;Crew-size&quot;: 6
-            }
-        },
-        &quot;Naomi Nagata&quot;: {
-            &quot;Occupation&quot;: &quot;Technician&quot;, 
-            &quot;Ethnicity&quot;: &quot;Belter&quot;,
-            &quot;Children&quot;: {
-                &quot;Filip Nagata&quot;: {
-                    &quot;Name&quot;: &quot;Filip Nagata&quot;,
-                    &quot;Occupation&quot;: &quot;Unknown&quot;
-                }
-            }
-        }
-    }
-}
-</code></pre>
-
-</div>
-</div>
-</div>
 </div></section></section><section ><section >
 <div id="cell-id=9b7b07b5-f3bb-403a-9e9f-8c5f339d286f" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
@@ -15785,13 +15797,547 @@ Sarah, en 25-årig romanforfatter, overvejede sine plot-ideer, mens hun valgte s
 </div>
 </div>
 </div></section></section><section ><section >
-<div id="cell-id=360a4683-40c2-4541-a453-642634d5c7f0" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div id="cell-id=4f02aee4-2142-452a-80ff-91df38979968" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Brug-af-egne-funktioner-(live-coding)">Brug af egne funktioner (live-coding)<a class="anchor-link" href="#Brug-af-egne-funktioner-(live-coding)">&#182;</a></h1>
+<h1 id="Sammens%C3%A6tning-af-data">Sammens&#230;tning af data<a class="anchor-link" href="#Sammens%C3%A6tning-af-data">&#182;</a></h1>
+</div>
+</div>
+</div>
+</div></section></section><section ><section >
+<div id="cell-id=791c8b60-fdef-4e36-bc6d-a9f9067bb5f2" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Sammens%C3%A6tning-af-data">Sammens&#230;tning af data<a class="anchor-link" href="#Sammens%C3%A6tning-af-data">&#182;</a></h2><p>Man kan af forskellige årsager have behov for at sammensætte datasæt.</p>
+<p>Man adskiller typsik mellem at udvide med flere <em>observationer</em> eller med flere <em>variable/oplysninger</em>.</p>
+<p><strong>Udvide med flere observationer</strong></p>
+<ul>
+<li>Data indsamlet over flere omgange</li>
+<li>Løbende opdatering af data</li>
+</ul>
+<p><strong>Udvide med flere variable/oplysninger</strong></p>
+<ul>
+<li>Data samles på tværs af flere kilder</li>
+<li>Oplysninger på forskellige enhedsniveauer</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div></section></section><section ><section >
+<div id="cell-id=4672a2ec-2f29-4cca-87ff-bfc179e17259" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Udvid-med-flere-observationer---appending/concatenating">Udvid med flere observationer - appending/concatenating<a class="anchor-link" href="#Udvid-med-flere-observationer---appending/concatenating">&#182;</a></h2><p>At udvide data med flere observationer kaldes typisk <em>appending</em> eller <em>concatenating</em> (for tabulær data).</p>
+<p>Bruges typisk når datasæt har samme kolonner, men forskellige rækker.</p>
+<p><img src="https://pandas.pydata.org/pandas-docs/stable/_images/merging_concat_basic.png" alt="concat" /></p>
+<p><em>Source: pandas.pydata.org/</em></p>
+
+</div>
+</div>
+</div>
+</div></section></section><section ><section >
+<div id="cell-id=b46d95ba-ec22-4ada-afb1-306cf2e5d719" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Udvid-med-flere-variable/oplysninger---join/merge">Udvid med flere variable/oplysninger - join/merge<a class="anchor-link" href="#Udvid-med-flere-variable/oplysninger---join/merge">&#182;</a></h2><p>At udvide data med flere variable/oplysninger kaldes typisk for <em>join</em> eller <em>merge</em> (for tabulær data).</p>
+<p>Bruges typisk når datasæt deler nogle af de samme observationer, men har forskellige variable/oplysninger.</p>
+<p>Man <em>joiner</em> typisk to datasæt ad gangen. De to datasæt, som joines, kaldes typisk <em>left</em> og <em>right</em> (terminologien kommer fra SQL - et databasesprog).</p>
+<p>Datasæt joines ud fra en eller flere <em>nøglevariable</em> - noget som unikt identificerer observationen/enheden.</p>
+<p><img src="https://pandas.pydata.org/pandas-docs/stable/_images/merging_merge_on_key.png" alt="join" /></p>
+<p><em>Source: pandas.pydata.org/</em></p>
+
+</div>
+</div>
+</div>
+</div></section></section><section ><section >
+<div id="cell-id=28b48b86-d144-4d60-86bc-c7d309db6a63" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Typer-af-joins">Typer af joins<a class="anchor-link" href="#Typer-af-joins">&#182;</a></h2><p><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fadaptabiz.com%2Fwp-content%2Fuploads%2F2020%2F10%2Fsql-joins.jpg" alt="join-types" /></p>
+<p><em>Source: adaptabiz.com</em></p>
+
+</div>
+</div>
+</div>
+</div></section></section><section ><section >
+<div id="cell-id=c3429765-a1c9-44f1-bb0b-d49eeb155550" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Dataformater-(wide-long)">Dataformater (wide-long)<a class="anchor-link" href="#Dataformater-(wide-long)">&#182;</a></h1>
+</div>
+</div>
+</div>
+</div></section></section><section ><section >
+<div id="cell-id=5da7c1d6-8f9c-4d25-b6a4-05217db571b7" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Dataformater-(wide-long)">Dataformater (wide-long)<a class="anchor-link" href="#Dataformater-(wide-long)">&#182;</a></h2><p>Datasæt kan have forskellige formater og strukturer. Det kan ofte være nødvendigt at ændre på datas format - enten for at det passer med den metode/funktion/model, som det skal bruges i, eller fordi det skal sættes sammen med andre datasæt.</p>
+<p>For datasæt i en tabelstruktur (rækker og kolonner), kan man overordnet adskille mellem to formater:</p>
+<ul>
+<li>wide: én række per observeret enhed (fx person), hvor hver oplysning/variabel har sin egen kolonne</li>
+<li>long: en observeret enhed kan have flere rækker, hvor en variabel indikerer, hvilken oplysning der er tale om for enheden</li>
+</ul>
+<p>Man støder ofte på det ene eller andet format i forbindelse med tidsserier, hvor man har gentagne målinger for de samme enheder.</p>
+
+</div>
+</div>
+</div>
+</div></section></section><section ><section >
+<div id="cell-id=77164d90-1ca1-40ee-849b-a06ab79d47c6" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Fra-wide-til-long---eksempel-1">Fra wide til long - eksempel 1<a class="anchor-link" href="#Fra-wide-til-long---eksempel-1">&#182;</a></h3>
+</div>
+</div>
+</div>
+</div><div class="fragment" ><div id="cell-id=888f2366-57f3-4535-92d4-69adeae48a94" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">wide_df</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>person</th>
+      <th>2010</th>
+      <th>2011</th>
+      <th>2012</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>A</td>
+      <td>32</td>
+      <td>16</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>B</td>
+      <td>83</td>
+      <td>37</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>C</td>
+      <td>8</td>
+      <td>55</td>
+      <td>55</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div></div><div class="fragment" ><div id="cell-id=6423d42e-221e-4a78-b842-c174de286974" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">long_df</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>person</th>
+      <th>year</th>
+      <th>train_rides</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>A</td>
+      <td>2010</td>
+      <td>32</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>B</td>
+      <td>2010</td>
+      <td>83</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>C</td>
+      <td>2010</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>A</td>
+      <td>2011</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>B</td>
+      <td>2011</td>
+      <td>37</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>C</td>
+      <td>2011</td>
+      <td>55</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>A</td>
+      <td>2012</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>B</td>
+      <td>2012</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>C</td>
+      <td>2012</td>
+      <td>55</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div></div></section></section><section ><section >
+<div id="cell-id=cc29d549-baff-4355-9949-7fec90abd6ff" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Fra-wide-til-long---eksempel-2">Fra wide til long - eksempel 2<a class="anchor-link" href="#Fra-wide-til-long---eksempel-2">&#182;</a></h3>
+</div>
+</div>
+</div>
+</div><div class="fragment" ><div id="cell-id=fdc5fe75-5685-4a25-aa93-10a0cb0d91d1" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">wide2_df</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[17]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>person</th>
+      <th>age</th>
+      <th>car_colour</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>A</td>
+      <td>22</td>
+      <td>red</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>B</td>
+      <td>53</td>
+      <td>white</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>C</td>
+      <td>36</td>
+      <td>blue</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>D</td>
+      <td>42</td>
+      <td>orange</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div></div><div class="fragment" ><div id="cell-id=7a4c53de-5d8c-4b19-80f8-c4242f0d185e" class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">long2_df</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[18]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>person</th>
+      <th>variable</th>
+      <th>value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>A</td>
+      <td>age</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>B</td>
+      <td>age</td>
+      <td>53</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>C</td>
+      <td>age</td>
+      <td>36</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>D</td>
+      <td>age</td>
+      <td>42</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>A</td>
+      <td>car_colour</td>
+      <td>red</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>B</td>
+      <td>car_colour</td>
+      <td>white</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>C</td>
+      <td>car_colour</td>
+      <td>blue</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>D</td>
+      <td>car_colour</td>
+      <td>orange</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div></div></section></section><section ><section >
+<div id="cell-id=159bea25-aae8-4b68-917d-34d555353433" class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="Sammens%C3%A6tning-af-data-og-%C3%A6ndring-af-dataformat-(live-coding)">Sammens&#230;tning af data og &#230;ndring af dataformat (live-coding)<a class="anchor-link" href="#Sammens%C3%A6tning-af-data-og-%C3%A6ndring-af-dataformat-(live-coding)">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -15803,11 +16349,23 @@ Sarah, en 25-årig romanforfatter, overvejede sine plot-ideer, mens hun valgte s
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="Opsummering">Opsummering<a class="anchor-link" href="#Opsummering">&#182;</a></h1><ul>
-<li>Data kan struktureres i forskellige formater og strukturer</li>
+<li>Man kan lave egne funktioner i Python, som er skræddersyet til de data og de problemstillinger, som man sidder med</li>
+<li>Data kan struktureres i forskellige formater og strukturer<ul>
 <li><em>Relationel</em> datastruktur er data i tabeller, som er begrænset til to dimensioner</li>
 <li><em>Hierarkisk</em> datastruktur er data i træ-lignende struktur</li>
 <li>Valg af datastruktur hænger sammen med, hvad data skal bruges til</li>
-<li>Man kan lave egne funktioner i Python, som er skræddersyet til de data og de problemstillinger, som man sidder med</li>
+</ul>
+</li>
+<li>Datasæt kan sammensættes på forskellig vis<ul>
+<li>Sammensætning af <em>rækker</em> kaldes typisk <em>appending</em> eller <em>concatenating</em> for tabulær data</li>
+<li>Sammensætning af <em>varible</em> kaldes typisk <em>join</em> eller <em>merge</em> for tabulær data</li>
+</ul>
+</li>
+<li>Tabulær data kan være i forskellige formater<ul>
+<li>Data i <em>wide</em> format indeholder én række per enhed</li>
+<li>Data i <em>long</em> format kan indeholde flere rækker per enhed (fx ved tidsserier)</li>
+</ul>
+</li>
 </ul>
 
 </div>
