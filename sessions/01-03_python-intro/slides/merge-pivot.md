@@ -1,5 +1,3 @@
-# Sammensætning af data
-
 ## Sammensætning af data
 
 Man kan af forskellige årsager have behov for at sammensætte datasæt. 
@@ -14,15 +12,19 @@ Man adskiller typsik mellem at udvide med flere *observationer* eller med flere 
 - Data samles på tværs af flere kilder
 - Oplysninger på forskellige enhedsniveauer
 
+---
+
 ## Udvid med flere observationer - appending/concatenating
 
 At udvide data med flere observationer kaldes typisk *appending* eller *concatenating* (for tabulær data).
 
 Bruges typisk når datasæt har samme kolonner, men forskellige rækker.
 
-![concat](https://pandas.pydata.org/pandas-docs/stable/_images/merging_concat_basic.png)
+![concat](https://pandas.pydata.org/pandas-docs/stable/_images/merging_concat_basic.png){width=35% lazy}
 
 *Source: pandas.pydata.org/*
+
+---
 
 ## Udvid med flere variable/oplysninger - join/merge
 
@@ -38,13 +40,21 @@ Datasæt joines ud fra en eller flere *nøglevariable* - noget som unikt identif
 
 *Source: pandas.pydata.org/*
 
+---
+
 ## Typer af joins
 
-![join-types](https://learnsql.fr/blog/comment-apprendre-les-jointures-sql/2.png)
+![join-types](https://learnsql.fr/blog/comment-apprendre-les-jointures-sql/2.png){width=70% lazy}
 
 *Source: learnsql.fr*
 
+---
+layout: section
+---
+
 # Dataformater (wide-long)
+
+---
 
 ## Dataformater (wide-long)
 
@@ -57,7 +67,12 @@ For datasæt i en tabelstruktur (rækker og kolonner), kan man overordnet adskil
 Man støder ofte på det ene eller andet format i forbindelse med tidsserier, hvor man har gentagne målinger for de samme enheder. 
 
 
+---
+
+## Dataformater (wide-long)
+
 ```python
+# code for generating examples
 import pandas as pd
 import random
 
@@ -78,6 +93,8 @@ long_df = pd.melt(wide_df, id_vars = ['person'], var_name = 'year', value_name =
 long2_df = pd.melt(wide2_df, id_vars = ['person'], var_name = 'variable', value_name = 'value')
 ```
 
+---
+
 ### Fra wide til long - eksempel 1
 
 
@@ -85,152 +102,34 @@ long2_df = pd.melt(wide2_df, id_vars = ['person'], var_name = 'variable', value_
 wide_df
 ```
 
+|      | person | 2010 | 2011 | 2012 |
+| ---- | ------ | ---- | ---- | ---- |
+| 0    | A      | 32   | 16   | 30   |
+| 1    | B      | 83   | 37   | 8    |
+| 2    | C      | 8    | 55   | 55   |
 
 
+---
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>person</th>
-      <th>2010</th>
-      <th>2011</th>
-      <th>2012</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>A</td>
-      <td>32</td>
-      <td>16</td>
-      <td>30</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>B</td>
-      <td>83</td>
-      <td>37</td>
-      <td>8</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>C</td>
-      <td>8</td>
-      <td>55</td>
-      <td>55</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-
+### Fra wide til long - eksempel 1
 
 ```python
 long_df
 ```
 
+|      | person | year | train_rides |
+| ---- | ------ | ---- | ----------- |
+| 0    | A      | 2010 | 32          |
+| 1    | B      | 2010 | 83          |
+| 2    | C      | 2010 | 8           |
+| 3    | A      | 2011 | 16          |
+| 4    | B      | 2011 | 37          |
+| 5    | C      | 2011 | 55          |
+| 6    | A      | 2012 | 30          |
+| 7    | B      | 2012 | 8           |
+| 8    | C      | 2012 | 55          |
 
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>person</th>
-      <th>year</th>
-      <th>train_rides</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>A</td>
-      <td>2010</td>
-      <td>32</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>B</td>
-      <td>2010</td>
-      <td>83</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>C</td>
-      <td>2010</td>
-      <td>8</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>A</td>
-      <td>2011</td>
-      <td>16</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>B</td>
-      <td>2011</td>
-      <td>37</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>C</td>
-      <td>2011</td>
-      <td>55</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>A</td>
-      <td>2012</td>
-      <td>30</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>B</td>
-      <td>2012</td>
-      <td>8</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>C</td>
-      <td>2012</td>
-      <td>55</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
+---
 
 ### Fra wide til long - eksempel 2
 
@@ -239,150 +138,40 @@ long_df
 wide2_df
 ```
 
+|      | person | age  | car_colour |
+| ---- | ------ | ---- | ---------- |
+| 0    | A      | 22   | red        |
+| 1    | B      | 53   | white      |
+| 2    | C      | 36   | blue       |
+| 3    | D      | 42   | orange     |
 
+---
 
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>person</th>
-      <th>age</th>
-      <th>car_colour</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>A</td>
-      <td>22</td>
-      <td>red</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>B</td>
-      <td>53</td>
-      <td>white</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>C</td>
-      <td>36</td>
-      <td>blue</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>D</td>
-      <td>42</td>
-      <td>orange</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-
+### Fra wide til long - eksempel 2
 
 ```python
 long2_df
 ```
 
+|      | person | variable   | value  |
+| ---- | ------ | ---------- | ------ |
+| 0    | A      | age        | 22     |
+| 1    | B      | age        | 53     |
+| 2    | C      | age        | 36     |
+| 3    | D      | age        | 42     |
+| 4    | A      | car_colour | red    |
+| 5    | B      | car_colour | white  |
+| 6    | C      | car_colour | blue   |
+| 7    | D      | car_colour | orange |
 
 
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>person</th>
-      <th>variable</th>
-      <th>value</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>A</td>
-      <td>age</td>
-      <td>22</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>B</td>
-      <td>age</td>
-      <td>53</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>C</td>
-      <td>age</td>
-      <td>36</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>D</td>
-      <td>age</td>
-      <td>42</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>A</td>
-      <td>car_colour</td>
-      <td>red</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>B</td>
-      <td>car_colour</td>
-      <td>white</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>C</td>
-      <td>car_colour</td>
-      <td>blue</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>D</td>
-      <td>car_colour</td>
-      <td>orange</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
+---
+layout: center
+---
 
 # Sammensætning af data og ændring af dataformat (live-coding)
+
+---
 
 # Opsummering
 

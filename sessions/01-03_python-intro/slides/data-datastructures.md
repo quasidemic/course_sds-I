@@ -4,19 +4,25 @@
 
 ![data-structure](../img/data_set_structure.png)
 
+---
+
 ## Relationel datastruktur
 
 - Data i tabeller
 - Hver tabel har kun 2 dimensioner (rækker og kolonner)
 
-![hierarch](../img/expanse_relational.png)
+![hierarch](../img/expanse_relational.png){width=20% lazy}
+
+---
 
 ## Hierarkisk datastruktur
 
 - Data i træ-lignende struktur
 - Ikke bundet til 2 dimensioner (hver gren kan have så mange undergrene, som  der er behov for)
 
-![hierarch](../img/expanse_hierarchical.png)
+![hierarch](../img/expanse_hierarchical.png){width=70% lazy}
+
+---
 
 ## Hyppige datafilformater: .csv
 
@@ -25,6 +31,7 @@
 - Værdier adskilt med kommaer
 - To-dimensionel datastruktur
 
+<v-click>
 ```
 name,ethnicity,vocation
 James,earther,captain
@@ -32,12 +39,19 @@ Naomi,belter,technician
 Alex,martian,pilot
 Clarissa,earther,mechanic
 ```
+</v-click>
+
+---
+layout: two-cols
+---
 
 ## Hyppige datafilformater: .json
 
 - Hierarkisk dataformat
 - Værdier i nøgle-værdi par
 - Flere "grene" kan tilføjes
+
+::right::
 
 ```
 {'Nemesis Games': {
@@ -66,6 +80,8 @@ Clarissa,earther,mechanic
 }
 ```
 
+---
+
 ## Datastruktur i Python: Liste af lister
 
 
@@ -77,31 +93,28 @@ vocation = ["captain", "technician", "pilot", "mechanic"]
 data = [names, ethnicities, vocation]
 ```
 
-
-```python
-data
+<v-click>
 ```
+# data
+[['James', 'Naomi', 'Alex', 'Clarissa'],
+ ['earther', 'belter', 'martian', 'earter'],
+ ['captain', 'technician', 'pilot', 'mechanic']]
+```
+</v-click>
 
-
-
-
-    [['James', 'Naomi', 'Alex', 'Clarissa'],
-     ['earther', 'belter', 'martian', 'earter'],
-     ['captain', 'technician', 'pilot', 'mechanic']]
-
-
-
-
+<v-click>
 ```python
 [items[0] for items in data]
 ```
+</v-click>
 
+<v-click>
+```
+['James', 'earther', 'captain']
+```
+</v-click>
 
-
-
-    ['James', 'earther', 'captain']
-
-
+---
 
 ## Datastruktur i Python: Dictionary (JSON)
 
@@ -115,32 +128,27 @@ data = {
 }
 ```
 
-
-```python
-data
+```
+# data
+{'James': {'ethnicity': 'earther', 'vocation': 'captain'},
+ 'Naomi': {'ethnicity': 'belter', 'vocation': 'technician'},
+ 'Alex': {'ethnicity': 'martian', 'vocation': 'pilot'},
+ 'Clarissa': {'ethnicity': 'earther', 'vocation': 'mechanic'}}
 ```
 
-
-
-
-    {'James': {'ethnicity': 'earther', 'vocation': 'captain'},
-     'Naomi': {'ethnicity': 'belter', 'vocation': 'technician'},
-     'Alex': {'ethnicity': 'martian', 'vocation': 'pilot'},
-     'Clarissa': {'ethnicity': 'earther', 'vocation': 'mechanic'}}
-
-
-
-
+<v-click>
 ```python
 data["James"]
 ```
+</v-click>
 
+<v-click>
+```
+{'ethnicity': 'earther', 'vocation': 'captain'}
+```
+</v-click>
 
-
-
-    {'ethnicity': 'earther', 'vocation': 'captain'}
-
-
+---
 
 ## Datastruktur i Python: Liste af dictionaries (JSON records)
 
@@ -154,32 +162,27 @@ data = [
 ]
 ```
 
-
-```python
-data
+```
+# data
+[{'name': 'James', 'ethnicity': 'earther', 'vocation': 'captain'},
+ {'name': 'Naomi', 'ethnicity': 'belter', 'vocation': 'technician'},
+ {'name': 'Alex', 'ethnicity': 'martian', 'vocation': 'pilot'},
+ {'name': 'Clarissa', 'ethnicity': 'earther', 'vocation': 'mechanic'}]
 ```
 
-
-
-
-    [{'name': 'James', 'ethnicity': 'earther', 'vocation': 'captain'},
-     {'name': 'Naomi', 'ethnicity': 'belter', 'vocation': 'technician'},
-     {'name': 'Alex', 'ethnicity': 'martian', 'vocation': 'pilot'},
-     {'name': 'Clarissa', 'ethnicity': 'earther', 'vocation': 'mechanic'}]
-
-
-
-
+<v-click>
 ```python
 data[0]
 ```
+</v-click>
 
+<v-click>
+```
+{'name': 'James', 'ethnicity': 'earther', 'vocation': 'captain'}
+```
+</v-click>
 
-
-
-    {'name': 'James', 'ethnicity': 'earther', 'vocation': 'captain'}
-
-
+---
 
 ## Datastruktur i Python: (pandas) Data frame
 
@@ -190,110 +193,51 @@ import pandas as pd
 data = pd.DataFrame.from_records(data)
 ```
 
+![hierarch](../img/expanse_relational.png){width=20% lazy}
 
-```python
-data
-```
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>name</th>
-      <th>ethnicity</th>
-      <th>vocation</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>James</td>
-      <td>earther</td>
-      <td>captain</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Naomi</td>
-      <td>belter</td>
-      <td>technician</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Alex</td>
-      <td>martian</td>
-      <td>pilot</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Clarissa</td>
-      <td>earther</td>
-      <td>mechanic</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-
-
+<v-click>
 ```python
 data.loc[0, :]
 ```
+</v-click>
 
+<v-click>
 
-
-
+```python
     name           James
     ethnicity    earther
     vocation     captain
     Name: 0, dtype: object
+```
+</v-click>
 
-
+---
 
 ## ØVELSE: Datastrukturer i Python
 
 Udled relevante oplysninger af nedenstående sætninger og sæt dem i en datastruktur, som du selv synes giver mening. Man skal kunne kalde alle oplysninger frem ved at kalde èn variabel.
 
-    For at blive klogere på deres kundebase, har SuperGroce ansat en konsulent til at observere, hvad kunderne køber i deres supermarked. Der blev observeret følgende:
+*For at blive klogere på deres kundebase, har SuperGroce ansat en konsulent til at observere, hvad kunderne køber i deres supermarked. Der blev observeret følgende:*
+    
+> Emily, en 32-årig grafisk designer, fyldte sin kurv med avocadoer, mandelmælk, grønkål, quinoa og mørk chokolade, mens hendes loyale golden retriever, Max, tålmodigt ventede ved hendes side.
 
-    Emily, en 32-årig grafisk designer, fyldte sin kurv med avocadoer, mandelmælk, grønkål, quinoa og mørk chokolade, mens hendes loyale golden retriever, Max, tålmodigt ventede ved hendes side.
+> Anders, en 45-årig arkæolog, købte fin-spidsede penne, kaffebønner, pitabrød og hummus, mens han forestillede sig sin aften med forskning sammen med sin nysgerrige papegøje, Luna.
 
-    Anders, en 45-årig arkæolog, købte fin-spidsede penne, kaffebønner, pitabrød og hummus, mens han forestillede sig sin aften med forskning sammen med sin nysgerrige papegøje, Luna.
+> 60-årig pensionist Eleanor samlede i sin kurv tomater, mozzarella, basilikum, olivenolie og baguetter for at skabe hendes signaturret, caprese-salat, alt imens hendes kat, Whiskers, slappede af i hendes indkøbsvogn.
 
-    Liam, en 28-årig fitness-træner, greb hurtigt kyllingebryster, spinat, proteinbarer, bananer og græsk yoghurt. Han kunne ikke vente med at komme i træningscenteret efter at have taget sin energiske australske hyrdehund, Bella, med på en løbetur.
+> Alex, en 19-årig universitetsstuderende, fyldte op med instant nudler, energidrikke, mikrobølgepopcorn, peanutbutter og brød. Sene studie-sessioner og hans stille guldfisk, Bubbles, ventede hjemme på kollegieværelset.
 
-    60-årig pensionist Eleanor samlede i sin kurv tomater, mozzarella, basilikum, olivenolie og baguetter for at skabe hendes signaturret, caprese-salat, alt imens hendes kat, Whiskers, slappede af i hendes indkøbsvogn.
+> Kokken Ramirez, en 50-årig kulinarisk ekspert, gik gennem gangene og valgte frisk basilikum, modne tomater, hvidløg, pasta og olivenolie for at tilberede en skøn pastaret, alt imens hans frække kæledyrsilder, Tango, kiggede ud fra hans skuldertaske.
 
-    Pavel, en 42-årig børnelæge, valgte omhyggeligt babymad, bleer, æblemos, gulerødder og fuldkornskiks og forventede en weekend sammen med familien.
+> Sarah, en 25-årig romanforfatter, overvejede sine plot-ideer, mens hun valgte sort te, honning, mandler, blåbær og mørk chokolade, forestillede sig en hyggelig skrive-session forude, med hendes pjuskede kæledyrskat, Oliver, puttet op tæt ved.
 
-    Alex, en 19-årig universitetsstuderende, fyldte op med instant nudler, energidrikke, mikrobølgepopcorn, peanutbutter og brød. Sene studie-sessioner og hans stille guldfisk, Bubbles, ventede hjemme på kollegieværelset.
-
-    Kokken Ramirez, en 50-årig kulinarisk ekspert, gik gennem gangene og valgte frisk basilikum, modne tomater, hvidløg, pasta og olivenolie for at tilberede en skøn pastaret, alt imens hans frække kæledyrsilder, Tango, kiggede ud fra hans skuldertaske.
-
-    35-årig astronaut Thomas tog astronaut-is, tørret frugt, proteinbarer, vakuum-pakket kylling og tortillas i sin kurv.
-
-    Sarah, en 25-årig romanforfatter, overvejede sine plot-ideer, mens hun valgte sort te, honning, mandler, blåbær og mørk chokolade, forestillede sig en hyggelig skrive-session forude, med hendes pjuskede kæledyrskat, Oliver, puttet op tæt ved.
+---
 
 ## ØVELSE: Datastrukturer i Python
 
 Udled af data hvilke kæledyr personerne over 40 år har.
+
+---
 
 # Opsummering
 

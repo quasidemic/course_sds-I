@@ -1,10 +1,10 @@
-# Indlæsning af filer i Python
-
 ## Indlæsning af filer i Python
 
 - Al indlæsning af filer i Python er baseret på *filstier*
 - En *filsti* angiver placeringen af en fil på en computer (kaldt en *file path* på engelsk og omtales typisk *path* i programmering)
 - En filsti angiver, hvordan computeren skal navigere igennem mapper (*directories*) for at finde en bestemt fil
+
+---
 
 ## Indlæsning af filer i Python
 
@@ -17,6 +17,8 @@
 - Mac: `/Users/kgk/data/datafil.csv`
 - Linux: `/usr/kgk/data/datafil.csv`
 
+<v-click>
+
 **Relative filstier**
 
 - Angiver filstien fra *arbejssti* til filen
@@ -25,6 +27,9 @@
 - `.`: Den nuværende directory
 
 *Eksempel*: `../../data/datafil.csv`
+</v-click>
+
+---
 
 ## Filstier i Python
 
@@ -40,17 +45,22 @@ path = "../../data/datafil.csv"
 df = pd.read_csv(path)
 ```
 
+---
+
 ## `os` modulet
 
 `os` modulet indeholder (blandt andet) en række funktioner til at navigere i filsystemer
 - `os.getcwd()` - print nuværende arbejdsmappe ("cwd": current working directory)
-- `os.chdir()` - ændr arbejdsmappe 
+- `os.chdir()` - skift arbejdsmappe 
+
+<v-click>
 
 `os` indeholder også funktionen `join` (`os.path.join()`). Denne gør det muligt at lave systemuafhængige filstier.
 - Sti som string: `path = "../../data/datafil.csv"`
 - Sti via `os`-modulet: `path = os.path.join("..", "..", "data", "datafil.csv")`
+</v-click>
 
-
+<v-click>
 Fordi filstier i princippet blot er sammensatte strings, kan man med fordel arbejde med variable, der angiver placeringen til mapper, som bruges flere gange (fx datamappe, outputmappe eller andet):
 
 ```python
@@ -58,14 +68,21 @@ datadir = "../../data"
 datafile = "datafil.csv"
 datapath = os.path.join(datadir, datafile)
 ```
+</v-click>
+
+---
 
 ## `open` funktionen 
 
 Hvordan filer indlæses i Python afhænger både af, hvilken filtype det er samt hvilken datastruktur, det skal læses ind i.
 
+<v-click>
 Funktionen `open` er en basisfunktion til at åbne tekstfiler i Python - enten til at skrive eller læse
 1. Åben filen via filens sti
 2. Angiv funktion(er) for at læse filen ind i korrekt datastruktur
+</v-click>
+
+<v-click>
 
 ```python
 filepath = "../../data/tekstfil.txt"
@@ -74,8 +91,15 @@ fileconn = open(filepath, "r") # "r" angiver at filen åbnes i læsetilstand
 with fileconn as f:
     data = f.read()
 ```
+</v-click>
+
+---
+layout: center
+---
 
 # Indlæsning af tekstfiler i Python (live-coding)
+
+---
 
 ## Opsummering
 
