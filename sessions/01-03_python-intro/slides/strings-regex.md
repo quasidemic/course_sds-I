@@ -372,7 +372,6 @@ Find ud af hvor mange karakterer i bogserien, der har et efternavn, der starter 
 **Tips:**
 
 - Hver karakter er adskilt af et linjeskift i filen. Tekstfilen kan laves om til en liste ved at splitte filen ved linjeskift: `.split('\n')`
-- Funktionen `set()` danner et sæt af unikke værdier i en liste
 
 ---
 layout: center
