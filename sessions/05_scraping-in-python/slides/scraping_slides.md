@@ -262,7 +262,7 @@ API'er er forskellige men indeholder typisk de samme delkomponenter:
 
 **Parametre:** Parametre er de *argumenter*, som endpointet accepterer. Via disse formuleres, hvad der efterspørges af API'en. 
 
-**Autentificeirng:** Mange API'er kræver autentificering. Dette kan være HTTPS autentificering (brugernavn og kodeord) eller autentificering via *tokens*. Tokens er unikke nøgler, der identificerer, hvem eller hvad der laver request/henvendelse via API'en.
+**Autentificering:** Mange API'er kræver autentificering. Dette kan være HTTPS autentificering (brugernavn og kodeord) eller autentificering via *tokens*. Tokens er unikke nøgler, der identificerer, hvem eller hvad der laver request/henvendelse via API'en.
 
 ---
 
